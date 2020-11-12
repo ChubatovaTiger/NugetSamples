@@ -13,6 +13,7 @@
         <!-- Include Assets as Content -->
         <files include="**/images/*.*" buildAction="Content" />
         <files include="**/data.txt" buildAction="Content" />
+      <files include="**/data1.txt" buildAction="Content" />
         <!-- Copy tool scripts to the output folder -->
         <files include="**/tools/*" buildAction="None" flatten="false" copyToOutput="true" />
     </contentFiles>
