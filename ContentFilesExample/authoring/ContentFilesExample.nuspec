@@ -18,7 +18,7 @@
         <files include="**/tools/*" buildAction="None" flatten="false" copyToOutput="true" />
     </contentFiles>
     <dependencies>
-        <dependency id="PackageA" version="1.1.0"
+        <dependency id="PackageAdfdf" version="1.1.0"
     </dependencies>
   </metadata>
 </package>
