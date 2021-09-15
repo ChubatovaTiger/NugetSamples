@@ -125,8 +125,5 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '19.0' ">
-    <VisualStudioVersion>19.0</VisualStudioVersion>
-  </PropertyGroup>
 
 </Project>
