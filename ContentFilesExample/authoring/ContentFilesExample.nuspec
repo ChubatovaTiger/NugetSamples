@@ -2,7 +2,7 @@
 <package>
   <metadata minClientVersion="3.3.0">
     <id>PackageTiger</id>
-    <version>500.0.13</version>
+    <version>500.0.14</version>
     <authors>nuget</authors>
     <owners>nuget</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
