@@ -1,5 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.pipelines.*
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -28,6 +30,7 @@ version = "2025.11"
 project {
 
     buildType(Build1)
+    pipeline(Project4_NugetSamples)
 }
 
 object Build1 : BuildType({
@@ -41,4 +44,28 @@ object Build1 : BuildType({
         perfmon {
         }
     }
+})
+
+
+object Project4_NugetSamples : Pipeline({
+    id("NugetSamples")
+    name = "NugetSamples"
+
+
+    triggers {
+        vcs {
+            branchFilter = """
+                -pr:*
+                +:*
+            """.trimIndent()
+        }
+    }
+
+    dependencies {
+        snapshot(AbsoluteId("Project3_Build1")) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
+
+    job(Project4_NugetSamples_Job1)
 })
