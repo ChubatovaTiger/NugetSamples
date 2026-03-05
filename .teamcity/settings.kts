@@ -62,7 +62,7 @@ object Project4_NugetSamples : Pipeline({
     }
 
     dependencies {
-        snapshot(AbsoluteId("Project3_Build1")) {
+        snapshot(AbsoluteId("Project4_Build1")) {
             reuseBuilds = ReuseBuilds.NO
         }
     }
