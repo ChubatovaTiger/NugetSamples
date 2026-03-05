@@ -67,5 +67,8 @@ object Project4_NugetSamples : Pipeline({
         }
     }
 
-    job(Project4_NugetSamples_Job1)
+    job{
+      id="Project4_NugetSamples_Job1"
+      name = "Build Maven"
+   }
 })
