@@ -51,6 +51,9 @@ object Project4_NugetSamples : Pipeline({
     id("NugetSamples")
     name = "NugetSamples"
 
+    repositories {
+        main(DslContext. settingsRoot)
+    }
 
     triggers {
         vcs {
